@@ -4,13 +4,13 @@ import axios from "axios";
 function Display() {
   const [stats, setStats] = useState({});
 
-  const fetchStats = async () => {
-    const res = await axios.get(
-      "https://clinic-queue-manager-api.onrender.com/api/patients";
-    );
+const fetchStats = async () => {
+  const res = await axios.get(
+    "https://clinic-queue-manager-api.onrender.com/api/patients/stats"
+  );
 
-    setStats(res.data);
-  };
+  setStats(res.data);
+};
 
   useEffect(() => {
     fetchStats();
