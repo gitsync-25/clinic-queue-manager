@@ -26,7 +26,8 @@ const [darkMode, setDarkMode] = useState(() => {
   return savedTheme ? JSON.parse(savedTheme) : true;
 });
 
-  const API = "http://localhost:5000/api/patients";
+  const API =
+  "https://clinic-queue-manager-api.onrender.com/api/patients";
 
   const fetchPatients = async () => {
     const res = await axios.get(API);

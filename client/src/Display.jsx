@@ -6,7 +6,7 @@ function Display() {
 
   const fetchStats = async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/patients/stats"
+      "https://clinic-queue-manager-api.onrender.com/api/patients";
     );
 
     setStats(res.data);
